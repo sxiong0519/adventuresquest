@@ -77,7 +77,11 @@ namespace Quest
                 guessRandom,
                 favoriteBeatle
             };
+
+            Prize prize = new Prize("diamonds");
+
             goOnAnAdventure();
+
             void goOnAnAdventure()
             {
                 // Loop through all the challenges and subject the Adventurer to them
@@ -99,6 +103,8 @@ namespace Quest
                 {
                     Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
                 }
+                Console.WriteLine("Your prizes are: "); 
+                prize.ShowPrize(theAdventurer);
                 playAgain();
             }
 
