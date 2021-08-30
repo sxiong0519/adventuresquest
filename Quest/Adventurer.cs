@@ -49,9 +49,10 @@ namespace Quest
             return $"Adventurer, {Name}, is {status}";
         }
 
+        string colors = String.Join(" and ", Robe.ColorOfTheRobe);
         public void GetDescriptions()
         {
-            Console.WriteLine($"{Name} is wearing a {ColorfulRobe.ColorOfTheRobe[1]} {ColorfulRobe.Length} inch robe.");
+            Console.WriteLine($"{Name} is wearing a {colors} {Robe.Length} feet robe.");
         }
     }
 }
