@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sue_x\\workspace\\adventuresquest\\quest\\Quest.csproj": {}
+    "C:\\Users\\sue_x\\workspace\\adventuresquest\\Quest\\Quest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sue_x\\workspace\\adventuresquest\\quest\\Quest.csproj": {
+    "C:\\Users\\sue_x\\workspace\\adventuresquest\\Quest\\Quest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sue_x\\workspace\\adventuresquest\\quest\\Quest.csproj",
+        "projectUniqueName": "C:\\Users\\sue_x\\workspace\\adventuresquest\\Quest\\Quest.csproj",
         "projectName": "Quest",
-        "projectPath": "C:\\Users\\sue_x\\workspace\\adventuresquest\\quest\\Quest.csproj",
+        "projectPath": "C:\\Users\\sue_x\\workspace\\adventuresquest\\Quest\\Quest.csproj",
         "packagesPath": "C:\\Users\\sue_x\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sue_x\\workspace\\adventuresquest\\quest\\obj\\",
+        "outputPath": "C:\\Users\\sue_x\\workspace\\adventuresquest\\Quest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sue_x\\AppData\\Roaming\\NuGet\\NuGet.Config",

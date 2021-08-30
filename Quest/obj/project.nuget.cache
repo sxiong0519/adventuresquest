@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OkqiUb/ilmrM5lyHY6OYNnmhMg0rP8WDOw1ncgUVgRoru0jf7q1rZmSgxGJfFehrleXof9VmkPQ4UAR2LzoQ8Q==",
+  "dgSpecHash": "drvppOJAeTB/XumLoiF45s5BWJrl0S52vvRjB8zC/BkslsC7ongnxiqBtu1v++HItmyPKYpGQUBA009Gjsrssw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sue_x\\workspace\\adventuresquest\\quest\\Quest.csproj",
+  "projectFilePath": "C:\\Users\\sue_x\\workspace\\adventuresquest\\Quest\\Quest.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
