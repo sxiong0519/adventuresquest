@@ -87,17 +87,17 @@ namespace Quest
             };
 
             Prize prize = new Prize("diamonds");
-
-            var shuffled = challenges.OrderBy(x => Guid.NewGuid()).ToList().Take(5);
             
 
             goOnAnAdventure();
 
             void goOnAnAdventure()
-            {
+            {   theAdventurer.ResetSuccessRate();
+                var shuffled = challenges.OrderBy(x => Guid.NewGuid()).ToList().Take(5);
                 // Loop through all the challenges and subject the Adventurer to them
                 foreach (Challenge challenge in shuffled)
-                {    
+                {   
+                    Console.WriteLine($"{theAdventurer.Awesomeness}");
                     challenge.RunChallenge(theAdventurer);
                     
                 }
@@ -115,10 +115,11 @@ namespace Quest
                 {
                     Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
                 }
-                Console.WriteLine("Your prizes are: "); 
+                Console.WriteLine($"{theAdventurer.Awesomeness} Your prizes are: "); 
                 prize.ShowPrize(theAdventurer);
                 playAgain();
             }
+
 
             void playAgain()
             {
@@ -126,6 +127,7 @@ namespace Quest
                 string playAgain = Console.ReadLine().ToLower();
                 if (playAgain == "y" )
                 {
+                    theAdventurer.DoublePointsPlayAgain();
                     goOnAnAdventure();
                 }
                 else 

@@ -13,6 +13,7 @@ namespace Quest
         private int _awesomenessChange;
 
 
+
         // A constructor for the Challenge
         // We can tell it's a constructor because it has the same name as the class 
         //   and it doesn't specify a return type
@@ -23,7 +24,7 @@ namespace Quest
             _correctAnswer = correctAnswer;
             _awesomenessChange = awesomenessChange;
         }
-
+        
         // This method will take an Adventurer object and make that Adventurer perform the challenge
         public void RunChallenge(Adventurer adventurer)
         {
@@ -40,6 +41,9 @@ namespace Quest
 
                 // Note how we access an Adventurer object's property
                 adventurer.Awesomeness += _awesomenessChange;
+
+                adventurer._successRate++;
+                Console.WriteLine($"{adventurer._successRate}");
             }
             else
             {
@@ -51,5 +55,6 @@ namespace Quest
             Console.WriteLine(adventurer.GetAdventurerStatus());
             Console.WriteLine();
         }
+
     }
 }
