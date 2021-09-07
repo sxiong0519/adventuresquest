@@ -16,6 +16,7 @@ namespace Quest
         // This is a mutable property it has a "get" and a "set"
         //  So it can be read and changed by any code in the application
         public int Awesomeness { get; set; }
+        public int _successRate { get; set; }
 
         // A constructor to make a new Adventurer object with a given name
         public Adventurer(string name, Robe color, Hat hat)
@@ -24,6 +25,17 @@ namespace Quest
             ColorfulRobe = color;
             _Hat = hat;
             Awesomeness = 50;
+            _successRate = 0;
+        }
+
+        public void ResetAwesomeness()
+        {
+            Awesomeness = 50;
+        }
+
+        public void ResetSuccessRate()
+        {
+            _successRate = 0;
         }
 
         // This method returns a string that describes the Adventurer's status
@@ -57,5 +69,13 @@ namespace Quest
         {
             Console.WriteLine($"{Name} is wearing a {colors} {Robe.Length} feet robe and a {Hat.ShininessDescription} hat.");
         }
+
+        public void DoublePointsPlayAgain()
+        {
+            int successProduct = _successRate * 10;
+            ResetAwesomeness();
+            Awesomeness += successProduct; 
+        }
+
     }
 }
