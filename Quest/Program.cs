@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 // Every class in the program is defined within the "Quest" namespace
 // Classes within the same namespace refer to one another without a "using" statement
@@ -12,7 +13,7 @@ namespace Quest
             Console.WriteLine("What is your name?");
             string AdventurerName = Console.ReadLine();
 
-            Console.WriteLine("What are the colors of your robe?");
+            Console.WriteLine("What are the color(s) of your robe?");
             string color = Console.ReadLine();
             List<string> colors = new List<string>();
             colors.Add(color);
@@ -41,9 +42,14 @@ namespace Quest
                 "What's the answer to life, the universe and everything?", 42, 25);
             Challenge whatSecond = new Challenge(
                 "What is the current second?", DateTime.Now.Second, 50);
-
+            
             int randomNumber = new Random().Next() % 10;
             Challenge guessRandom = new Challenge("What number am I thinking of?", randomNumber, 25);
+
+            Challenge multiplyBy = new Challenge("What is 121 * 79?", 9559, 10);
+
+            Challenge tomato = new Challenge(
+                "Do you think tomato is a fruit? 1)Yes! 2)No.", 2, 35);
 
             Challenge favoriteBeatle = new Challenge(
                 @"Who's your favorite Beatle?
@@ -75,19 +81,25 @@ namespace Quest
                 theAnswer,
                 whatSecond,
                 guessRandom,
-                favoriteBeatle
+                favoriteBeatle,
+                multiplyBy,
+                tomato
             };
 
             Prize prize = new Prize("diamonds");
+
+            var shuffled = challenges.OrderBy(x => Guid.NewGuid()).ToList().Take(5);
+            
 
             goOnAnAdventure();
 
             void goOnAnAdventure()
             {
                 // Loop through all the challenges and subject the Adventurer to them
-                foreach (Challenge challenge in challenges)
-                {
+                foreach (Challenge challenge in shuffled)
+                {    
                     challenge.RunChallenge(theAdventurer);
+                    
                 }
                 // This code examines how Awesome the Adventurer is after completing the challenges
                 // And praises or humiliates them accordingly

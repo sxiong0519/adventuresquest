@@ -3,9 +3,10 @@ using System;
 namespace Quest
 {
     public class Hat 
-    {
+    {  
+        //mutable integer property
         public static int ShininessLevel { get; set; }
-
+        //computed string property
         public static string ShininessDescription 
         {
             get {
